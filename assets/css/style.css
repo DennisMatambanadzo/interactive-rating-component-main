@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --clr-primary-orange: hsl(25, 97%, 53%);
+
+    --clr-neutral-white: hsl(0, 0%, 100%);
+    --clr-neutral-light-grey: hsl(217, 12%, 63%);
+    --clr-neutral-dark-blue: hsl(213, 19%, 18%);
+    --clr-neutral-very-dark-blue: hsl(216, 12%, 8%);
+
+    --ff-overpass: 'Overpass', sans-serif;
+
+    --fw-400: 400;
+    --fw-700: 700;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 1440px;
+    align-content: center;
+    min-height: 100vh;
+    background-color: var(--clr-neutral-very-dark-blue);
+    font-family: var(--ff-overpass);
+}
+
+.container {
+    display: grid;
+    /* background-color: aliceblue; */
+    justify-content: center;
+}
+
+.main-box {
+    display: grid;
+    max-width: 30rem;
+    background-color: var(--clr-neutral-dark-blue);
+    padding: 2rem;
+    margin: auto;
+    row-gap: 1.5rem;
+    border-radius: 2rem;
+}
+
+.gold-star {
+    background-color: var(--clr-neutral-light-grey);
+    padding: 1.5rem;
+    border-radius: 3rem;
+}
+
+.question {
+    font-size: 2rem;
+    font-weight: var(--fw-700);
+    color: var(--clr-neutral-white);
+}
+
+.support {
+    color: var(--clr-neutral-light-grey);
+    font-weight: var(--fw-400);
+    /* line-height: ; */
+}
+
+.rating-btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating {
+    background-color: var(--clr-neutral-light-grey);
+    padding: 1.5rem;
+    line-height: .7;
+    min-width: fit-content;
+    border-radius: 3rem;
+}
+
+.rating:hover {
+    background-color: var(--clr-primary-orange);
+    cursor: pointer;
+}
+
+
+.submit {
+    background-color: var(--clr-primary-orange);
+    text-align: center;
+    padding: 1rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    font-weight: var(--fw-700);
+    color: var(--clr-neutral-dark-blue);
+}
+
+.submit:hover {
+    background-color: var(--clr-neutral-white);
+}
+
+.modal-box {
+    display: none;
+    position: relative;
+    max-width: 30rem;
+    background-color: var(--clr-neutral-dark-blue);
+    padding: 2rem;
+    margin: auto;
+    row-gap: 1.5rem;
+    border-radius: 2rem;
+    z-index: 1;
+}
+
+.active {
+    display: block;
+}
+
+.inactive {
+    display: none;
+}
