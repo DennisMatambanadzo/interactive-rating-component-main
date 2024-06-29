@@ -24,14 +24,15 @@ body {
     max-width: 1440px;
     align-content: center;
     min-height: 100vh;
+    margin: auto;
     background-color: var(--clr-neutral-very-dark-blue);
     font-family: var(--ff-overpass);
 }
 
 .container {
     display: grid;
-    /* background-color: aliceblue; */
-    justify-content: center;
+   justify-content: center;
+    
 }
 
 .main-box {
@@ -59,7 +60,7 @@ body {
 .support {
     color: var(--clr-neutral-light-grey);
     font-weight: var(--fw-400);
-    /* line-height: ; */
+
 }
 
 .rating-btns {
@@ -67,13 +68,26 @@ body {
     justify-content: space-between;
 }
 
-.rating {
+ input[type="radio"]{
+    opacity: 0;
+    width: 0;
+    display: none;
+ }
+ label{
     background-color: var(--clr-neutral-light-grey);
     padding: 1.5rem;
     line-height: .7;
     min-width: fit-content;
+    cursor: pointer;
     border-radius: 3rem;
-}
+ }
+ label:hover{
+    background-color: var(--clr-primary-orange);
+ }
+ input[type="radio"]:checked + label{
+    background-color: var(--clr-neutral-white);
+  
+ }
 
 .rating:hover {
     background-color: var(--clr-primary-orange);
@@ -97,18 +111,34 @@ body {
 
 .modal-box {
     display: none;
-    position: relative;
     max-width: 30rem;
     background-color: var(--clr-neutral-dark-blue);
     padding: 2rem;
-    margin: auto;
     row-gap: 1.5rem;
+    text-align: center;
     border-radius: 2rem;
-    z-index: 1;
+    z-index: 1;/
+}
+.modal-box > img{
+    margin-inline: auto;
 }
 
+
 .active {
-    display: block;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+.rating-box{
+    color: var(--clr-primary-orange);
+}
+.thanks{
+    font-size: 1.5rem;
+    color:var(--clr-neutral-white);
+    font-weight: var(--fw-700);
+}
+.appreciate{
+    color: var(--clr-neutral-light-grey);
 }
 
 .inactive {
